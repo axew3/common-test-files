@@ -203,7 +203,7 @@
         $access_token = $currentPageData['token'];
 
     	$headers = [
-       'Host: mmopa.memberclicks.net',
+       'Host: ......memberclicks.net',
        'Accept: application/json',
        'Authorization: Bearer '.$access_token.'',
        'Cache-Control: no-cache',
