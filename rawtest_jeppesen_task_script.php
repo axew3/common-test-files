@@ -9,7 +9,7 @@
 
   if(! isset($_GET['code']) && ! isset($_GET['state']) )
   {
-   header('Location: https://mmopa.memberclicks.net/oauth/v1/authorize?response_type=code&client_id=a5Y........kkQK&state=8d.....-3df5-11e6-ac61-9e.....e77&redirect_uri=https%3A%2F%2Flocalhost%2F....Jeppesen%2Ftask.php');
+   header('Location: https://.....memberclicks.net/oauth/v1/authorize?response_type=code&client_id=a5Y........kkQK&state=8d.....-3df5-11e6-ac61-9e.....e77&redirect_uri=https%3A%2F%2Flocalhost%2F....Jeppesen%2Ftask.php');
    exit;
   }
    else
