@@ -201,8 +201,6 @@
         $count = $partial = $currentPageData['count'];
         $totalCountAll = $currentPageData['totalCount'];
         $access_token = $currentPageData['token'];
-        //$totalPageCount = $currentPageData['totalPageCount'];
-        $totalPageCount = intval(($totalCountAll-10)/100);
 
     	$headers = [
        'Host: mmopa.memberclicks.net',
@@ -211,13 +209,9 @@
        'Cache-Control: no-cache',
       ];
 
-       //echo '$totalPageCount = '.$totalPageCount;exit;
-       //while ($partial < $totalCountAll) {
-     	 //while ($pageNumber < 39) {
-
     $totalPageCount = intval(($totalCountAll-10)/100);
     $test_pc = ($totalPageCount*100)+10;
-    //if( $test_pc < $totalCountAll ) { $totalPageCount++; }
+    if( $test_pc < $totalCountAll ) { $totalPageCount++; }
 
      	 while ($pageNumber < $totalPageCount) {
      //echo $partial.'<br>';
@@ -285,8 +279,7 @@
      $list[] = array($p_response['[Created Date]'],$p_response['[Expiration Date]'],$p_response['[Email | Primary]'], $p_response['[Name | First]'], $p_response['[Name | Last]'], $p_response['[Member Type]'], $p_response['[Member Number]'], $p_response['[Profile ID]'], $p_response['[Member Status]'], $p_response['Jeppesen Account Number']);
 
      // Put pages data from each subsequent API response
-       // echo'<br>OKAAAAAAAA<br><br><br><pre>';
-       // print_r($list);exit;
+
      $fp = fopen($resfile, 'w');
 
        foreach ($list as $fields) {
