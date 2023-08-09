@@ -20,7 +20,7 @@
       $data = array( 'Authorization' => 'Basic '.$clientCredentials.'', 'grant_type' => 'authorization_code', 'code' => $_GET["code"], 'scope' => 'read', 'redirect_uri' => $redir );
       $data = http_build_query($data);
       $headers = [
-       'Host: mmopa.memberclicks.net',
+       'Host: .....memberclicks.net',
        'Authorization: Basic '.$clientCredentials.'',
        'Content-Type: application/x-www-form-urlencoded',
        'Cache-Control: no-cache',
@@ -58,7 +58,7 @@
     {
 
     	$headers = [
-       'Host: mmopa.memberclicks.net',
+       'Host: ......memberclicks.net',
        'Accept: application/json',
        'Authorization: Bearer '.$access_token.'',
        'Cache-Control: no-cache',
